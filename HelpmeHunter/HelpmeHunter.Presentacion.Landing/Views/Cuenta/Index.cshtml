@@ -1,0 +1,119 @@
+﻿@model HelpmeHunter.Presentacion.Landing.ViewModels.Cuenta.IndexVM
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_CuentaLayout.cshtml";
+}
+
+@section Styles {
+    <style>
+        .page-content {
+            max-width: 400px;
+        }
+    </style>
+}
+
+@section Modals {
+    <div class="modal fade" id="modal-registrarme" aria-hidden="true" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalTabs">¿Cómo deseas registrarte?</h4>
+                </div>
+                <ul class="nav nav-tabs nav-tabs-line" data-plugin="nav-tabs" role="tablist">
+                    <li class="active" role="presentation"><a data-toggle="tab" href="#tabEmpresa" role="tab" aria-expanded="false">Empresa</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#tabConsultor" role="tab" aria-expanded="false">Consultor</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#tabProfesional" role="tab" aria-expanded="false">Profesional</a></li>
+                </ul>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabEmpresa" role="tabpanel">
+                            <p>
+                                Insolens patientiamque recte caecilii gaudere alienae varias repetitis inscientia
+                                ipsos. Partiendo interpretum vult ludicra iam abest
+                                disputatum geometriaque inflammat probes, tandem
+                                ullum iuste texit mundus delicatissimi iactare, impeditur
+                            </p>
+                            <p class="text-right">
+                                @Html.ActionLink("Registrarme", "Empresa", null, new { @class = "btn btn-info" })
+                            </p>
+                        </div>
+                        <div class="tab-pane" id="tabConsultor" role="tabpanel">
+                            <p>
+                                Tenuit omni magistra quale honoris, maluisti invidi, successerit feramus fere omnium
+                                impetum locus suscipiantur ullum, gessisse afranius
+                                stabilique repellendus longinquitate sentiamus torquatos
+                                rem. Bene continens, depulsa soluta domesticarum
+                                inscientia excruciant artes epicuri, huic similique
+                            </p>
+                            <p class="text-right">
+                                @Html.ActionLink("Registrarme", "Consultor", null, new { @class = "btn btn-info" })
+                            </p>
+                        </div>
+                        <div class="tab-pane" id="tabProfesional" role="tabpanel">
+                            <p>
+                                Cernimus nutu. Maioribus solet. Iustitiam conciliant reliquisti instituendarum
+                                solido quicquid, superstitione placet illis privatione
+                                clariora audeam repellat morbos accusantibus, quaeso
+                                copulationes. Percurri salutatus derigatur praeter
+                                involuta canes afflueret iam amotio quin. Dicent
+                                dialectica evertunt astris venire senserit. Vulgo
+                            </p>
+                            <p class="text-right">
+                                @Html.ActionLink("Registrarme", "Profesional", null, new { @class = "btn btn-info" })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<h5 class="text-left">Ingresa a HELPME-HUNTER</h5>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <button type="button" class="btn btn-block btn-labeled social-linkedin" name="@Html.NameFor(m => m.EsEmpresa)" value="false">
+        <span class="btn-label">
+            <i class="icon bd-linkedin" aria-hidden="true"></i>
+        </span>
+        Linkedin
+    </button>
+}
+<div class="separator"></div>
+<h5 class=" text-left">Ó ingresa como empresa</h5>
+@using (Html.BeginForm())
+{
+    Model.EsEmpresa = true;
+    @Html.HiddenFor(m => m.EsEmpresa)
+    @Html.AntiForgeryToken()
+    <div class="form-group text-left">
+        <div class="input-group input-group-icon">
+            @Html.TextBoxFor(m => m.Correo, new { @class = "form-control", @placeholder = "Escribe tu correo aquí", @maxlength = 100 })
+            <span class="input-group-addon">
+                <span class="icon wb-envelope" aria-hidden="true"></span>
+            </span>
+        </div>
+        @Html.ValidationMessageFor(m => m.Correo)
+    </div>
+    <div class="form-group text-left">
+        <div class="input-group input-group-icon">
+            @Html.PasswordFor(m => m.Clave, new { @class = "form-control", @placeholder = "Escribe tu clave aquí", @maxlength = 20 })
+            <span class="input-group-addon">
+                <span class="icon wb-lock" aria-hidden="true"></span>
+            </span>
+        </div>
+        @Html.ValidationMessageFor(m => m.Clave)
+    </div>
+    <button class="btn btn-primary btn-block">
+        Entrar
+    </button>
+}
+<div class="separator"></div>
+<a href="#" data-target="#modal-registrarme" data-toggle="modal">
+    ¡No tengo cuenta y quiero registrarme!
+</a>

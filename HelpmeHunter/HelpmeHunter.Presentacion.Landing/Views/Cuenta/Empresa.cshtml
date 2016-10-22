@@ -1,0 +1,170 @@
+﻿@model HelpmeHunter.Presentacion.Landing.ViewModels.Cuenta.EmpresaVM
+
+@{
+    ViewBag.Title = "Empresa";
+    Layout = "~/Views/Shared/_CuentaLayout.cshtml";
+}
+
+@section Styles {
+    <link href="~/remark/plugins/select2/select2.min09a2.css" rel="stylesheet" />
+    <link href="~/remark/plugins/bootstrap-select/bootstrap-select.min09a2.css" rel="stylesheet" />
+    <link href="~/remark/plugins/formatter-js/masks.min09a2.css" rel="stylesheet" />
+    <link href="~/remark/plugins/typeahead-js/typeahead.min09a2.css" rel="stylesheet" />
+    <style>
+        .page-content {
+            max-width: 900px;
+            width: 100%;
+        }
+    </style>
+}
+
+<h4 class="text-left">Completa los datos de tu empresa</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="st-label">Razón social</label>
+                @Html.TextBoxFor(m => m.RazonSocial, new { @class = "form-control", @placeholder = "Ingresa la razón social de tu empresa" })
+                @Html.ValidationMessageFor(m => m.RazonSocial)
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">RUC</label>
+                @Html.TextBoxFor(m => m.RUC, new { @class = "form-control input-number", @maxlength = 11, @placeholder = "Ingresa en RUC de tu empresa" })
+                @Html.ValidationMessageFor(m => m.RUC)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">Sector</label>
+                @Html.DropDownListFor(m => m.IdSector, Model.Sectores, new { @class = "form-control", @data_plugin = "select2" })
+                @Html.ValidationMessageFor(m => m.IdSector)
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">Website</label>
+                @Html.TextBoxFor(m => m.WebSite, new { @class = "form-control", @placeholder = "Ej: http://www.helpme-hunter.com" })
+                @Html.ValidationMessageFor(m => m.WebSite)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="form-group form-material ">
+                        <label class="control-label">Teléfono</label>
+                        @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control input-number", @data_plugin = "formatter", @data_pattern = "(01) [[999]]-[[9999]]" })
+                        @Html.ValidationMessageFor(m => m.Telefono)
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="form-group form-material ">
+                        <label class="control-label">Anexo</label>
+                        @Html.TextBoxFor(m => m.Anexo, new { @class = "form-control input-number", @data_plugin = "formatter", @data_pattern = "(*) [[9999]]" })
+                        @Html.ValidationMessageFor(m => m.Anexo)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">¿Cuál es tu celular?</label>
+                @Html.TextBoxFor(m => m.Celular, new { @class = "form-control input-number", @data_plugin = "formatter", @data_pattern = "9[[99]]-[[999]]-[[999]]" })
+                @Html.ValidationMessageFor(m => m.Celular)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">¿A que país pertenece la empresa?</label>
+                @Html.DropDownListFor(m => m.IdPaisEmpresa, Model.Paises, new { @class = "form-control", @data_plugin = "select2" })
+                @Html.ValidationMessageFor(m => m.IdPaisEmpresa)
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">¿A que país perteneces?</label>
+                @Html.DropDownListFor(m => m.IdPais, Model.Paises, new { @class = "form-control", @data_plugin = "select2" })
+                @Html.ValidationMessageFor(m => m.IdPais)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">¿Cuáles son tus nombres?</label>
+                @Html.TextBoxFor(m => m.Nombres, new { @class = "form-control", @placeholder = "Escribe aquí tus nombres" })
+                @Html.ValidationMessageFor(m => m.Nombres)
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">¿Cuáles son tus apellidos?</label>
+                @Html.TextBoxFor(m => m.Apellidos, new { @class = "form-control", @placeholder = "Escribe aquí tus apellidos" })
+                @Html.ValidationMessageFor(m => m.Apellidos)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">¿Cuál es tu puesto actual en la empresa?</label>
+                @Html.TextBoxFor(m => m.PuestoActual, new { @class = "form-control", @placeholder = "Selecciona al menos un puesto de trabajo" })
+                @Html.ValidationMessageFor(m => m.PuestoActual)
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 text-left">
+            <div class="form-group form-material ">
+                <label class="control-label">¿Cuál es tu correo corporativo?</label>
+                @Html.TextBoxFor(m => m.CorreoCorporativo, new { @class = "form-control", @placeholder = "Ej: roberto@helpme-hunter.com" })
+                @Html.ValidationMessageFor(m => m.CorreoCorporativo)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <button class="btn btn-primary">
+                <i class="icon wb-check" aria-hidden="true"></i>
+                Continuar
+            </button>
+        </div>
+    </div>
+}
+
+@section ScriptsPlugins {
+    <script src="~/remark/plugins/select2/select2.full.min.js"></script>
+    <script src="~/remark/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="~/remark/plugins/formatter-js/jquery.formatter.min.js"></script>
+    <script src="~/remark/js/components/select2.min.js"></script>
+    <script src="~/remark/js/components/bootstrap-select.min.js"></script>
+    <script src="~/remark/js/components/formatter-js.min.js"></script>
+    <script src="~/remark/plugins/typeahead-js/bloodhound.min.js"></script>
+    <script src="~/remark/plugins/typeahead-js/typeahead.jquery.min.js"></script>
+}
+@section Scripts {
+    
+    <script>
+        $('#PuestoActual').typeahead({
+            minLength: 1,
+            highlight: true
+        }, {
+            name: 'puestos',
+            source: (query, syncResults, asyncResults) => {
+                $.getJSON('@Url.Action("ListarPuestos")', { query: query })
+                .done((data) => {
+                    asyncResults(data);
+                });
+            }
+        })
+    </script>
+
+}

@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80A28096-14D2-4F73-8E20-07475D58E05D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelpmeHunter.Presentacion.Landing</RootNamespace>
+    <AssemblyName>HelpmeHunter.Presentacion.Landing</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\core\cuenta.css">
+      <DependentUpon>cuenta.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\core\cuenta.min.css">
+      <DependentUpon>cuenta.css</DependentUpon>
+    </Content>
+    <Content Include="Content\flexslider.css" />
+    <Content Include="Content\icomoon.css" />
+    <Content Include="Content\images\image_1.jpg" />
+    <Content Include="Content\images\image_2.jpg" />
+    <Content Include="Content\images\img_bg_1.jpg" />
+    <Content Include="Content\images\img_bg_2.jpg" />
+    <Content Include="Content\images\loader.gif" />
+    <Content Include="Content\images\person1.jpg" />
+    <Content Include="Content\images\person2.jpg" />
+    <Content Include="Content\images\person3.jpg" />
+    <Content Include="Content\images\project-11.jpg" />
+    <Content Include="Content\images\project-12.jpg" />
+    <Content Include="Content\images\project-2.jpg" />
+    <Content Include="Content\images\project-3.jpg" />
+    <Content Include="Content\images\project-4.jpg" />
+    <Content Include="Content\images\project-5.jpg" />
+    <Content Include="Content\images\project-6.jpg" />
+    <Content Include="Content\images\project-7.jpg" />
+    <Content Include="Content\images\project-8.jpg" />
+    <Content Include="Content\images\project-9.jpg" />
+    <Content Include="Content\images\work_1.png" />
+    <Content Include="Content\magnific-popup.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icomoon\icomoon.svg" />
+    <Content Include="remark\css\bootstrap-extend.min09a2.css" />
+    <Content Include="remark\css\bootstrap.min09a2.css" />
+    <Content Include="remark\css\site.min09a2.css" />
+    <Content Include="remark\fonts\brand-icons\brand-icons.min09a2.css" />
+    <Content Include="remark\fonts\brand-icons\brand-iconsa29e.svg" />
+    <Content Include="remark\fonts\web-icons\web-icons.min09a2.css" />
+    <Content Include="remark\fonts\web-icons\web-iconsd622.svg" />
+    <Content Include="remark\js\app.min.js" />
+    <Content Include="remark\js\components\animsition.min.js" />
+    <Content Include="remark\js\components\asscrollable.min.js" />
+    <Content Include="remark\js\components\bootstrap-select.min.js" />
+    <Content Include="remark\js\components\formatter-js.min.js" />
+    <Content Include="remark\js\components\jquery-placeholder.min.js" />
+    <Content Include="remark\js\components\material.min.js" />
+    <Content Include="remark\js\components\select2.min.js" />
+    <Content Include="remark\js\components\slidepanel.min.js" />
+    <Content Include="remark\js\components\switchery.min.js" />
+    <Content Include="remark\js\core.min.js" />
+    <Content Include="remark\js\sections\gridmenu.min.js" />
+    <Content Include="remark\js\sections\menu.min.js" />
+    <Content Include="remark\js\sections\menubar.min.js" />
+    <Content Include="remark\js\sections\sidebar.min.js" />
+    <Content Include="remark\js\sections\skintools.min.js" />
+    <Content Include="remark\js\site.min.js" />
+    <Content Include="remark\plugins\animsition\animsition.min.js" />
+    <Content Include="remark\plugins\animsition\animsition.min09a2.css" />
+    <Content Include="remark\plugins\ashoverscroll\jquery-asHoverScroll.min.js" />
+    <Content Include="remark\plugins\asscrollable\asScrollable.min09a2.css" />
+    <Content Include="remark\plugins\asscrollable\jquery.asScrollable.all.min.js" />
+    <Content Include="remark\plugins\asscroll\jquery-asScroll.min.js" />
+    <Content Include="remark\plugins\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="remark\plugins\bootstrap-select\bootstrap-select.min09a2.css" />
+    <Content Include="remark\plugins\breakpoints\breakpoints.min.js" />
+    <Content Include="remark\plugins\flag-icon-css\flag-icon.min09a2.css" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ad.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ae.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\af.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ag.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ai.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\al.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\am.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ao.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\aq.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ar.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\as.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\at.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\au.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\aw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ax.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\az.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ba.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bb.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bd.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\be.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bh.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bi.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bj.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bl.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bo.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bq.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\br.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bs.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bt.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bv.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\by.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\bz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ca.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cc.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cd.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ch.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ci.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ck.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cl.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\co.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cu.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cv.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cx.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cy.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\cz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\de.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\dj.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\dk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\dm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\do.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\dz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ec.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ee.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\eg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\eh.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\er.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\es.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\et.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\fi.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\fj.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\fk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\fm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\fo.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\fr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ga.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gb.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gd.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ge.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gh.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gi.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gl.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gp.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gq.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gs.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gt.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gu.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\gy.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\hk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\hm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\hn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\hr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ht.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\hu.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\id.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ie.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\il.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\im.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\in.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\io.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\iq.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ir.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\is.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\it.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\je.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\jm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\jo.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\jp.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ke.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\kg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\kh.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ki.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\km.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\kn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\kp.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\kr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\kw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ky.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\kz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\la.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\lb.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\lc.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\li.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\lk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\lr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ls.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\lt.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\lu.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\lv.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ly.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ma.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mc.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\md.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\me.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mh.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ml.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mo.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mp.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mq.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ms.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mt.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mu.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mv.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mx.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\my.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\mz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\na.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\nc.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ne.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\nf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ng.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ni.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\nl.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\no.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\np.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\nr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\nu.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\nz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\om.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pa.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pe.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ph.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pl.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ps.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pt.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\pw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\py.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\qa.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\re.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ro.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\rs.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ru.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\rw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sa.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sb.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sc.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sd.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\se.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sh.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\si.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sj.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sl.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\so.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ss.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\st.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sv.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sx.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sy.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\sz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tc.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\td.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\th.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tj.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tk.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tl.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\to.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tr.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tt.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tv.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tw.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\tz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ua.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ug.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\um.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\us.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\uy.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\uz.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\va.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\vc.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ve.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\vg.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\vi.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\vn.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\vu.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\wf.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ws.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\ye.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\yt.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\za.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\zm.svg" />
+    <Content Include="remark\plugins\flag-icon-css\flags\zw.svg" />
+    <Content Include="remark\plugins\formatter-js\jquery.formatter.min.js" />
+    <Content Include="remark\plugins\formatter-js\masks.min09a2.css" />
+    <Content Include="remark\plugins\intro-js\intro.min.js" />
+    <Content Include="remark\plugins\intro-js\introjs.min09a2.css" />
+    <Content Include="remark\plugins\modernizr\modernizr.min.js" />
+    <Content Include="remark\plugins\mousewheel\jquery.mousewheel.min.js" />
+    <Content Include="remark\plugins\screenfull\screenfull.min.js" />
+    <Content Include="remark\plugins\select2\select2.full.min.js" />
+    <Content Include="remark\plugins\select2\select2.min.js" />
+    <Content Include="remark\plugins\select2\select2.min09a2.css" />
+    <Content Include="remark\plugins\slidepanel\jquery-slidePanel.min.js" />
+    <Content Include="remark\plugins\slidepanel\slidePanel.min09a2.css" />
+    <Content Include="remark\plugins\switchery\switchery.min.js" />
+    <Content Include="remark\plugins\switchery\switchery.min09a2.css" />
+    <Content Include="remark\plugins\typeahead-js\bloodhound.min.js" />
+    <Content Include="remark\plugins\typeahead-js\typeahead.jquery.min.js" />
+    <Content Include="remark\plugins\typeahead-js\typeahead.min09a2.css" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\core\site.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery.countTo.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.waypoints.min.js" />
+    <Content Include="Scripts\magnific-popup-options.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Controllers\CuentaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Cuenta\EmpresaVM.cs" />
+    <Compile Include="ViewModels\Cuenta\IndexVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\icomoon\icomoon.eot" />
+    <Content Include="fonts\icomoon\icomoon.ttf" />
+    <Content Include="fonts\icomoon\icomoon.woff" />
+    <Content Include="Views\Home\Acerca.cshtml" />
+    <Content Include="Views\Home\Contacto.cshtml" />
+    <Content Include="Views\Home\Servicios.cshtml" />
+    <Content Include="Views\Home\Trabajo.cshtml" />
+    <Content Include="Content\core\cuenta.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="Properties\PublishProfiles\myasp.net.pubxml" />
+    <Content Include="remark\fonts\brand-icons\brand-iconsa29e.eot" />
+    <Content Include="remark\fonts\brand-icons\brand-iconsa29e.ttf" />
+    <Content Include="remark\fonts\brand-icons\brand-iconsa29e.woff" />
+    <Content Include="remark\fonts\brand-icons\brand-iconsa29e.woff2" />
+    <Content Include="remark\fonts\brand-icons\brand-iconsd41d.eot" />
+    <Content Include="remark\fonts\web-icons\web-iconsd41d.eot" />
+    <Content Include="remark\fonts\web-icons\web-iconsd622.eot" />
+    <Content Include="remark\fonts\web-icons\web-iconsd622.ttf" />
+    <Content Include="remark\fonts\web-icons\web-iconsd622.woff" />
+    <Content Include="remark\fonts\web-icons\web-iconsd622.woff2" />
+    <Content Include="Views\Shared\_CuentaLayout.cshtml" />
+    <Content Include="Views\Cuenta\Index.cshtml" />
+    <Content Include="Views\Shared\_BasicStyles.cshtml" />
+    <Content Include="Views\Shared\_BasicScripts.cshtml" />
+    <Content Include="Views\Cuenta\Empresa.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelpmeHunter.Modelo\HelpmeHunter.Modelo.csproj">
+      <Project>{466529ba-f82f-456f-82bb-ad702e5d7fb7}</Project>
+      <Name>HelpmeHunter.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpmeHunter.Repositorios\HelpmeHunter.Repositorios.csproj">
+      <Project>{d01e4f68-3aca-44c9-a8a3-37fab0ad15a6}</Project>
+      <Name>HelpmeHunter.Repositorios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpmeHunter.Utilitarios\HelpmeHunter.Utilitarios.csproj">
+      <Project>{2eb4c357-dc30-4094-bf4f-6436a7a04173}</Project>
+      <Name>HelpmeHunter.Utilitarios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52246</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52246/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

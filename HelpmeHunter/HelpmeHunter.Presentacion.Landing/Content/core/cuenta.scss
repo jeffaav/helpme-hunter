@@ -1,0 +1,14 @@
+﻿$bg-url: '../images/img_bg_1.jpg';
+
+body{
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url(#{$bg-url});
+    background-attachment: fixed;
+}
+
+.separator{
+    height: 20px;
+}

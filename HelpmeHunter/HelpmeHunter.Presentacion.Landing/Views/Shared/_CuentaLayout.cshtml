@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - HelpmeHunter</title>
+    <link href="~/Content/core/cuenta.min.css" rel="stylesheet" />
+    @RenderPage("_BasicStyles.cshtml")
+    @RenderSection("Styles", false)
+</head>
+<body class="layout-full"> @*style="background-image: url(@Url.Content("~/Content/images/img_bg_1.jpg")"*@
+
+    @RenderSection("Modals", false)
+
+    <div class="page animsition vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        <div class="page-content vertical-align-middle">
+            <div class="panel" style="padding-top: 30px;">
+                <div class="brand">
+                    <h2 class="brand-text text-uppercase" style="font-size: 28px;">
+                        <b>Helpme-Hunter</b>
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    @RenderBody()
+                </div>
+            </div>
+            <footer class="page-copyright page-copyright-inverse">
+                <p>Helpme Hunter © 2016. ALL RIGHTS RESERVED.</p>
+            </footer>
+        </div>
+    </div>
+
+    @RenderPage("_BasicScripts.cshtml")
+    @RenderSection("ScriptsPlugins", false)
+    <script src="~/Scripts/core/site.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>
