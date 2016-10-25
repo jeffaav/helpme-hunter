@@ -47,6 +47,19 @@ namespace HelpmeHunter.Presentacion.Landing.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Empresa(EmpresaVM viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var idPuesto = repositorioPuesto.Obtener(p => p.Nombre == viewModel.PuestoActual).IdPuesto;
+            }
+
+            GuardarViewModel(viewModel);
+            return RedirectToAction(nameof(Empresa));
+        }
+
         public ActionResult Profesional()
         {
             return View();

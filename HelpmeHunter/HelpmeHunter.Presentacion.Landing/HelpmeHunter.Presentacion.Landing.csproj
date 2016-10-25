@@ -511,6 +511,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\Cuenta\EmpresaVM.cs" />
     <Compile Include="ViewModels\Cuenta\IndexVM.cs" />
+    <Compile Include="ViewModels\Cuenta\ProfesionalVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
