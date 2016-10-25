@@ -496,7 +496,9 @@
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -509,6 +511,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\Cuenta\EmpresaVM.cs" />
     <Compile Include="ViewModels\Cuenta\IndexVM.cs" />
+    <Compile Include="ViewModels\Cuenta\ProfesionalVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

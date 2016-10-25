@@ -7,7 +7,10 @@
                     <div class="display-tc animate-box" data-animate-effect="fadeIn">
                         <h1>We are Creative Studio</h1>
                         <h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-                        <p><a href="#" class="btn btn-default">View Our Work</a></p>
+                        <p>
+                            @Html.ActionLink("Soy empresa", "Empresa", "Cuenta", null, new { @class = "btn btn-default", @style = "border-radius: 4px;" })
+                            @Html.ActionLink("Soy consultor", "Consultor", "Cuenta", null, new { @class = "btn btn-default", @style = "border-radius: 4px;" })
+                        </p>
                     </div>
                 </div>
             </div>
