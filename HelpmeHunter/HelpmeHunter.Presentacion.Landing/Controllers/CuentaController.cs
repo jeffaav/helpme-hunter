@@ -1,9 +1,9 @@
 ﻿using HelpmeHunter.Presentacion.Landing.ViewModels.Cuenta;
-using HelpmeHunter.Repositorios;
 using HelpmeHunter.Utilitarios;
 using HelpmeHunter.Utilitarios.Mvc;
 using System.Web.Mvc;
 using System.Linq;
+using HelpmeHunter.Modelo.Repositorios;
 
 namespace HelpmeHunter.Presentacion.Landing.Controllers
 {

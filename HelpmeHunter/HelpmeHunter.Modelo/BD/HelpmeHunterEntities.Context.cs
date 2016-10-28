@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HelpmeHunter.Modelo
+namespace HelpmeHunter.Modelo.BD
 {
     using System;
     using System.Data.Entity;
@@ -26,7 +26,7 @@ namespace HelpmeHunter.Modelo
         }
     
         public virtual DbSet<Pais> Pais { get; set; }
-        public virtual DbSet<Sector> Sector { get; set; }
         public virtual DbSet<Puesto> Puesto { get; set; }
+        public virtual DbSet<Sector> Sector { get; set; }
     }
 }

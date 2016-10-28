@@ -1,6 +1,5 @@
 using System;
 using Microsoft.Practices.Unity;
-using HelpmeHunter.Repositorios;
 using HelpmeHunter.Modelo;
 
 namespace HelpmeHunter.Presentacion.Landing.App_Start
@@ -40,7 +39,6 @@ namespace HelpmeHunter.Presentacion.Landing.App_Start
             // container.RegisterType<IProductRepository, ProductRepository>();
 
             UnityConfigModelo.RegistrarModelo(container);
-            UnityConfigRepositorio.RegistrarRepositorios(container);
         }
     }
 }

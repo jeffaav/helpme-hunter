@@ -571,10 +571,6 @@
       <Project>{466529ba-f82f-456f-82bb-ad702e5d7fb7}</Project>
       <Name>HelpmeHunter.Modelo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HelpmeHunter.Repositorios\HelpmeHunter.Repositorios.csproj">
-      <Project>{d01e4f68-3aca-44c9-a8a3-37fab0ad15a6}</Project>
-      <Name>HelpmeHunter.Repositorios</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HelpmeHunter.Utilitarios\HelpmeHunter.Utilitarios.csproj">
       <Project>{2eb4c357-dc30-4094-bf4f-6436a7a04173}</Project>
       <Name>HelpmeHunter.Utilitarios</Name>

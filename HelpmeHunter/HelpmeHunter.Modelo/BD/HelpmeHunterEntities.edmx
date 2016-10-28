@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HelpmeHunterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="HelpmeHunterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Pais">
           <Key>
             <PropertyRef Name="IdPais" />
@@ -31,28 +31,17 @@
           <EntitySet Name="Puesto" EntityType="Self.Puesto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sector" EntityType="Self.Sector" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HelpmeHunterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="HelpmeHunterEntities" annotation:LazyLoadingEnabled="true" >
-          <EntitySet Name="Pais" EntityType="HelpmeHunterModel.Pais" />
-          <EntitySet Name="Sector" EntityType="HelpmeHunterModel.Sector" />
-          <EntitySet Name="Puesto" EntityType="HelpmeHunterModel.Puesto" />
-        </EntityContainer>
         <EntityType Name="Pais">
           <Key>
             <PropertyRef Name="IdPais" />
           </Key>
           <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Sector">
-          <Key>
-            <PropertyRef Name="IdSector" />
-          </Key>
-          <Property Name="IdSector" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Puesto">
           <Key>
@@ -61,33 +50,45 @@
           <Property Name="IdPuesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Sector">
+          <Key>
+            <PropertyRef Name="IdSector" />
+          </Key>
+          <Property Name="IdSector" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HelpmeHunterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pais" EntityType="Self.Pais" />
+          <EntitySet Name="Puesto" EntityType="Self.Puesto" />
+          <EntitySet Name="Sector" EntityType="Self.Sector" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HelpmeHunterModelStoreContainer" CdmEntityContainer="HelpmeHunterEntities" >
+        <EntityContainerMapping StorageEntityContainer="HelpmeHunterModelStoreContainer" CdmEntityContainer="HelpmeHunterEntities">
           <EntitySetMapping Name="Pais">
             <EntityTypeMapping TypeName="HelpmeHunterModel.Pais">
               <MappingFragment StoreEntitySet="Pais">
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="IdPais" ColumnName="IdPais" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Sector">
-            <EntityTypeMapping TypeName="HelpmeHunterModel.Sector">
-              <MappingFragment StoreEntitySet="Sector">
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="IdSector" ColumnName="IdSector" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Puesto">
             <EntityTypeMapping TypeName="HelpmeHunterModel.Puesto">
               <MappingFragment StoreEntitySet="Puesto">
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sector">
+            <EntityTypeMapping TypeName="HelpmeHunterModel.Sector">
+              <MappingFragment StoreEntitySet="Sector">
+                <ScalarProperty Name="IdSector" ColumnName="IdSector" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

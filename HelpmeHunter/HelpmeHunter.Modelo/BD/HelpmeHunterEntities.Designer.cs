@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Jeffrey Aguirre\Documents\Visual Studio 2015\Projects\HelpmeHunter\HelpmeHunter.Modelo\HelpmeHunterEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\GIT\helpme-hunter\HelpmeHunter\HelpmeHunter.Modelo\BD\HelpmeHunterEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

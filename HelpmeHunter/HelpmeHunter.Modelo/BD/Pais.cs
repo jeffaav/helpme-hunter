@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HelpmeHunter.Modelo
+namespace HelpmeHunter.Modelo.BD
 {
     using System;
     using System.Collections.Generic;

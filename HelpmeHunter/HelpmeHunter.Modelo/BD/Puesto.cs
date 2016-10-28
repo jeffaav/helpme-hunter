@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HelpmeHunter.Modelo
+namespace HelpmeHunter.Modelo.BD
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Sector
+    public partial class Puesto
     {
-        public int IdSector { get; set; }
+        public int IdPuesto { get; set; }
         public string Nombre { get; set; }
     }
 }

@@ -104,58 +104,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelpmeHunterEntities.Context.cs">
+    <Compile Include="BD\HelpmeHunterEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HelpmeHunterEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="HelpmeHunterEntities.cs">
+    <Compile Include="BD\HelpmeHunterEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HelpmeHunterEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="HelpmeHunterEntities.Designer.cs">
+    <Compile Include="BD\HelpmeHunterEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HelpmeHunterEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Pais.cs">
+    <Compile Include="BD\Pais.cs">
+      <DependentUpon>HelpmeHunterEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Puesto.cs">
+      <DependentUpon>HelpmeHunterEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Sector.cs">
       <DependentUpon>HelpmeHunterEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Puesto.cs">
-      <DependentUpon>HelpmeHunterEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sector.cs">
-      <DependentUpon>HelpmeHunterEntities.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Repositorios\RepositorioGenerico.cs" />
+    <Compile Include="Repositorios\RepositorioPais.cs" />
+    <Compile Include="Repositorios\RepositorioPuesto.cs" />
+    <Compile Include="Repositorios\RepositorioSector.cs" />
     <Compile Include="UnityConfigModelo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="HelpmeHunterEntities.edmx">
+    <EntityDeploy Include="BD\HelpmeHunterEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>HelpmeHunterEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="HelpmeHunterEntities.edmx.diagram">
+    <None Include="BD\HelpmeHunterEntities.edmx.diagram">
       <DependentUpon>HelpmeHunterEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HelpmeHunterEntities.Context.tt">
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BD\HelpmeHunterEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HelpmeHunterEntities.edmx</DependentUpon>
       <LastGenOutput>HelpmeHunterEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="HelpmeHunterEntities.tt">
+    <Content Include="BD\HelpmeHunterEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HelpmeHunterEntities.edmx</DependentUpon>
       <LastGenOutput>HelpmeHunterEntities.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

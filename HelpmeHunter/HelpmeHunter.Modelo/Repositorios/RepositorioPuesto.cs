@@ -1,6 +1,6 @@
-﻿using HelpmeHunter.Modelo;
+﻿using HelpmeHunter.Modelo.BD;
 
-namespace HelpmeHunter.Repositorios
+namespace HelpmeHunter.Modelo.Repositorios
 {
     public class RepositorioPuesto : RepositorioGenerico<Puesto>
     {
